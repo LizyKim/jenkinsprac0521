@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options {
-    sklpStagesAfterUnstable()
+    skipStagesAfterUnstable()
   }
   stages {
     stage('Build') {
