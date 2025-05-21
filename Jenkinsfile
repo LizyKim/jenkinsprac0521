@@ -6,18 +6,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo //sh 'make' 대신 넣음, gpt
+        echo '빌드 단'//sh 'make' 대신 넣음, gpt
       }
     }
     stage('Test') {
       steps {
-        echo // sh 'make check'
+        echo '테스트 단계'// sh 'make check'
         // junit 'reports/**/*.xml'
       }
     }
     stage('Deploy') {
       steps {
-        echo //sh 'make publish'
+        echo '배포 단계'//sh 'make publish'
       }
     }
   }
