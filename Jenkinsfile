@@ -24,10 +24,10 @@ pipeline {
             steps {
                 echo '📄 결과 파일 저장 중...'
                 sh '''
-                    echo "✅ Jenkins Build 성공!" > result.txt
-                    echo "🕒 시간: ${BUILD_TIME}" >> result.txt
-                    echo "🔢 빌드 번호: ${BUILD_NUMBER}" >> result.txt
-                    echo "👤 실행자: ${BUILD_USER}" >> result.txt || echo "실행자 정보 없음" >> result.txt
+                    echo "Successful Junkins Build" > result.txt
+                    echo "execution time: ${BUILD_TIME}" >> result.txt
+                    echo "build number : ${BUILD_NUMBER}" >> result.txt
+                    echo "member: ${BUILD_USER}" >> result.txt || echo "no info" >> result.txt
                 '''
                 archiveArtifacts artifacts: 'result.txt', onlyIfSuccessful: true
             }
