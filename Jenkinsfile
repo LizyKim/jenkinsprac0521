@@ -39,5 +39,6 @@ pipeline {
         mail to: 'hiiamlizy@gmail.com',
              subject: "✅ Jenkins 빌드 성공!",
              body: "Build #${BUILD_NUMBER} was successful."
+        }
     }
 }
