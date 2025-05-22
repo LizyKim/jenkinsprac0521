@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo '📄 결과 파일 저장 중...'
                 sh '''
-                    echo "Successful Junkins Build" > result.txt
+                    echo "Successful Junkins Build, THIS IS BRANCH ONE." > result.txt
                     echo "execution time: ${BUILD_TIME}" >> result.txt
                     echo "build number : ${BUILD_NUMBER}" >> result.txt
                     echo "member: ${BUILD_USER}" >> result.txt || echo "no info" >> result.txt
