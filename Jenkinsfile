@@ -35,11 +35,9 @@ pipeline {
     }
 
     post {
-        success {
-            echo '🎉 모든 단계 성공적으로 완료!'
-        }
-        failure {
-            echo '❌ 빌드 실패! 원인을 분석하세요.'
-        }
+    success {
+        mail to: 'hiiamlizy@gmail.com',
+             subject: "✅ Jenkins 빌드 성공!",
+             body: "Build #${BUILD_NUMBER} was successful."
     }
 }
