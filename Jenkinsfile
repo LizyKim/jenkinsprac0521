@@ -81,7 +81,7 @@ pipeline {
 
     post {
     success {
-        mail to: 'hiiamlizy@gmail.com',
+        mail to: 'alex6715jh@gmail.com',
              subject: "✅ Jenkins 빌드 성공!",
              body: "Build #${BUILD_NUMBER} was successful."
 
